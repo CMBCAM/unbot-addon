@@ -115,7 +115,7 @@ UnBotCommandToGroups = {
 };
 
 UnBotIconFiles = {
-[0] = 5420,
+[0] = 5983,
 [1] = 514,
 [2] = 1177,
 [3] = 1178,
