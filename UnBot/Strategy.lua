@@ -86,15 +86,15 @@ local function CreateStrategyFrame(name)
 	strategyFrame.rightScrollFrame.child:SetHeight(strategyFrame.rightScrollFrame:GetHeight() - (childGap * 2));
 	strategyFrame.rightScrollFrame:SetScrollChild(strategyFrame.rightScrollFrame.child);
 
-	--strategyFrame:SetScale(UnBotScaleConfig or 1);
+	strategyFrame:SetScale(UnBotScaleConfig or 1);
 
 	strategyFrame:Show();
 
 	local closeFrame = CreateFrame("Button","StrategyFrameCloseBtn"..name,strategyFrame,"UIPanelCloseButton");
-	closeFrame:SetWidth(58);
-	closeFrame:SetHeight(58);
+	closeFrame:SetWidth(40);
+	closeFrame:SetHeight(40);
 	closeFrame:Show();
-	closeFrame:SetPoint("TOPRIGHT", strategyFrame, "TOPRIGHT", 20, 20);
+	closeFrame:SetPoint("TOPRIGHT", strategyFrame, "TOPRIGHT", -5, -5);
 	closeFrame:SetScript("OnClick", function()
 		RemoveFromStrategyFrame(strategyFrame)
 		strategyFrame:Hide()
