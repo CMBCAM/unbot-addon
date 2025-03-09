@@ -179,8 +179,8 @@ function CommandUninvite(index)
 	-- 	DisplayInfomation("你当前不是队伍领袖。");
 	-- 	return;
 	-- end
-	SendChatMessage("nc +grind", "PARTY");
-	SendChatMessage("stay", "PARTY");
+	-- SendChatMessage("nc +grind", "PARTY");
+	-- SendChatMessage("stay", "PARTY");
 	if (UnitInRaid("player") ~= nil) then
 		if (GetNumRaidMembers()>0) then
 			for i=1, GetNumRaidMembers(), 1 do

@@ -67,7 +67,7 @@ local function CreateStrategyFrame(name)
 	strategyFrame.rightScrollFrame = CreateFrame("ScrollFrame", "StrategyListFrameRight"..name, strategyFrame,"StrategyListFrameTemplate");
 	strategyFrame.rightScrollFrame:SetPoint("TOPRIGHT", strategyFrame, "TOPRIGHT", -15, -65);
 	strategyFrame.rightScrollFrame.strategyFrame = strategyFrame;
-	strategyFrame.rightScrollFrame.slider = CreateFrame("Slider", "StrategyFrameChildLeftSlider"..name, strategyFrame.rightScrollFrame, "StrategyListFrameSlider");
+	strategyFrame.rightScrollFrame.slider = CreateFrame("Slider", "StrategyFrameChildRightSlider"..name, strategyFrame.rightScrollFrame, "StrategyListFrameSlider");
 	strategyFrame.rightScrollFrame.slider.scrollFrame = strategyFrame.rightScrollFrame;
 	strategyFrame.rightScrollFrame.slider:SetPoint("TOPRIGHT", strategyFrame.rightScrollFrame, "TOPRIGHT", 0, 0);
 
@@ -79,22 +79,22 @@ local function CreateStrategyFrame(name)
 	strategyFrame.leftScrollFrame.child:SetHeight(strategyFrame.leftScrollFrame:GetHeight() - (childGap * 2));
 	strategyFrame.leftScrollFrame:SetScrollChild(strategyFrame.leftScrollFrame.child);
 
-	strategyFrame.rightScrollFrame.child = CreateFrame("Frame", "StrategyFrameChildLeft"..name, strategyFrame.rightScrollFrame);
+	strategyFrame.rightScrollFrame.child = CreateFrame("Frame", "StrategyFrameChildRight"..name, strategyFrame.rightScrollFrame);
 	strategyFrame.rightScrollFrame.child.memberBars = {};
 	strategyFrame.rightScrollFrame.child:SetPoint("TOPLEFT", strategyFrame.rightScrollFrame, "TOPLEFT", childGap, -childGap);
 	strategyFrame.rightScrollFrame.child:SetWidth(strategyFrame.rightScrollFrame:GetWidth() - (childGap * 2));
 	strategyFrame.rightScrollFrame.child:SetHeight(strategyFrame.rightScrollFrame:GetHeight() - (childGap * 2));
 	strategyFrame.rightScrollFrame:SetScrollChild(strategyFrame.rightScrollFrame.child);
 
-	strategyFrame:SetScale(UnBotScaleConfig);
+	--strategyFrame:SetScale(UnBotScaleConfig or 1);
 
 	strategyFrame:Show();
 
 	local closeFrame = CreateFrame("Button","StrategyFrameCloseBtn"..name,strategyFrame,"UIPanelCloseButton");
-	closeFrame:SetWidth(40);
-	closeFrame:SetHeight(40);
+	closeFrame:SetWidth(58);
+	closeFrame:SetHeight(58);
 	closeFrame:Show();
-	closeFrame:SetPoint("TOPRIGHT", strategyFrame, "TOPRIGHT", -5, -5);
+	closeFrame:SetPoint("TOPRIGHT", strategyFrame, "TOPRIGHT", 20, 20);
 	closeFrame:SetScript("OnClick", function()
 		RemoveFromStrategyFrame(strategyFrame)
 		strategyFrame:Hide()
