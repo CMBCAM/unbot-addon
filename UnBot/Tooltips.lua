@@ -395,8 +395,8 @@ UnBotTooltipHelp = {
 
 UnBotExecuteCommand = {
 [1] = "",
-[2] = ".playerbot bot init=auto",
-[3] = ".playerbot bot init=auto *",
+-- [2] = ".playerbot bot init=auto",
+-- [3] = ".playerbot bot init=auto *",
 -- [4] = ".playerbot bot update",
 [5] = ".reset talents",
 -- [6] = ".playerbot bot talent=1",
@@ -470,14 +470,14 @@ UnBotExecuteCommand = {
 [74] = "online",
 [75] = "",--/w %s 
 [76] = "stay",--/w %s 
-[77] = ".playerbot bot addclass",
+-- [77] = ".playerbot bot addclass",
 [78] = "friends online",
 [79] = "friends invite",
 -- [80] = "ready check",
 [81] = "drink",
 [82] = ".playerbot bot remove *",
 [83] = ".playerbot bot add *",
-[84] = "naxx",
+-- [84] = "naxx",
 [85] = "reset",
 [86] = ".playerbot bot remove",
 [87] = ".playerbot bot add",
