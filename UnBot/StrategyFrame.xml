@@ -72,7 +72,9 @@
 	</ThumbTexture>
 	<Scripts>
 		<OnValueChanged>
-			self.scrollFrame:SetVerticalScroll(self:GetValue());
+			 if self.scrollFrame then
+                self.scrollFrame:SetVerticalScroll(self:GetValue())
+            end
 		</OnValueChanged>
 	</Scripts>
   </Slider>

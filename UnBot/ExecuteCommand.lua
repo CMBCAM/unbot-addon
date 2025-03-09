@@ -179,7 +179,7 @@ function CommandUninvite(index)
 	-- 	DisplayInfomation("你当前不是队伍领袖。");
 	-- 	return;
 	-- end
-	SendChatMessage("nc +grind", "PARTY");
+	-- SendChatMessage("nc +grind", "PARTY");
 	SendChatMessage("stay", "PARTY");
 	if (UnitInRaid("player") ~= nil) then
 		if (GetNumRaidMembers()>0) then
@@ -316,7 +316,7 @@ function CommandUnBotUseItem(index)
 		return;
 	end
 	-- if (not IsRealPartyLeader()) then
-	-- 	DisplayInfomation("你当前不是队伍领袖。");
+	-- 	DisplayInfomation("You are not currently a team leader.");
 	-- 	return;
 	-- end
 	CreateIconsByUnBotBagsFrame(5, "UnBotUseItem"..targetName,1,true,{},targetName,targetClass,"Use items",FlushItemsToBags,UnBotExecuteCommand[index],GetItemFunc);
@@ -353,7 +353,7 @@ function CommandAddFriends(index)
 				local name = (UnitName("raid"..i));
 				if (name and name ~= UnitName("player")) then
 					AddFriend(name);
-					-- DisplayInfomation("添加好友"..name);
+					-- DisplayInfomation("Added Friends: "..name);
 				end
 			end
 		end
@@ -363,7 +363,7 @@ function CommandAddFriends(index)
 				local name = (UnitName("party"..i));
 				if (name and name ~= UnitName("player")) then
 					AddFriend(name);
-					-- DisplayInfomation("添加好友"..name);
+					-- DisplayInfomation("Added Friends: "..name);
 				end
 			end
 		end

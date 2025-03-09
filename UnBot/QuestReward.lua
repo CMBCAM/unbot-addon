@@ -17,7 +17,7 @@ function RecvQuestReward(name, info)
 			if (itemName == nil or texture == nil) then
 				YssBossLoot:QueryItemInfo(itemID);
 				itemName = "???";
-				texture = "Interface\\Icons\\Temp";
+				texture = "Interface\\Icons\\Spell_ChargeNegative";
 				needQuery = true;
 			end
 			local itemInfo = {[1] = itemID, [2] = needQuery, [3] = tostring(name), [4] = texture, [5] = tostring(itemName)};

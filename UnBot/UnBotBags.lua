@@ -49,8 +49,8 @@ local function CreateIconGroupByParent(fromParent,hheadGap,vheadGap,hnum,vnum,hg
 			iconsGroup[iconsIndex] = newFrame;
 			iconsIndex = iconsIndex + 1;
 			newFrame.countLabel = newFrame:CreateFontString(newFrame:GetName().."Count","OVERLAY");
-			newFrame.countLabel:SetFont("Fonts\\FRIZQT__.TTF",11);
-			newFrame.countLabel:SetTextColor(0.8,0,0.8,1);
+			newFrame.countLabel:SetFont("Fonts\\FRIZQT__.TTF",11, "OUTLINE");
+			newFrame.countLabel:SetTextColor(1,1,1,1);
 			newFrame.countLabel:SetHeight(12);
 			newFrame.countLabel:SetText(" ");
 			newFrame.countLabel:SetPoint("BOTTOMRIGHT",newFrame,"BOTTOMRIGHT",-2,2);
