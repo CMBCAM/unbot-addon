@@ -481,14 +481,14 @@ UnBotExecuteCommand = {
 [85] = "reset",
 [86] = ".playerbot bot remove",
 [87] = ".playerbot bot add",
--- [88] = "add friends"
-[89] = "grind",
+[88] = "add friends"
+-- [89] = "grind",
 };
 
---1 = 不需要选择目标
---2 = 需要选择友方目标
---3 = 需要选择敌对目标"
---4 = 自动以全队作为目标
+--1 = No need to select a target
+--2 = Requires a friendly target selected
+--3 = Requires a hostile target selected
+--4 = Automatically targets the entire group
 UnBotCommandType = {
 [0] = 0,
 [1] = 1,
